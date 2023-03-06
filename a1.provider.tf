@@ -14,10 +14,10 @@ terraform {
       source = "hashicorp/null"
     }
     backend "remote" {
-    hostname="app.terraform.io"
-    organization = "terraform-cloud" 
-    workspace {
-      name = "vpc-migration-op"
+      hostname="app.terraform.io"
+      organization = "terraform-cloud" 
+      workspace {
+        name = "vpc-migration"
       }
     }
 
