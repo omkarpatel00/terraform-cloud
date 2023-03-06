@@ -15,9 +15,9 @@ terraform {
     }
     backend "remote" {
       hostname="app.terraform.io"
-      organization = "cloud4cvpc" 
+      organization = "terraform-cloud" 
       workspace {
-        name = "vpc-migration"
+        name = "vpc-migration-op"
       }
     }
 
