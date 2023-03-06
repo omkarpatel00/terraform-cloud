@@ -13,13 +13,18 @@ terraform {
     null = {
       source = "hashicorp/null"
     }
-
+    backend "remote" {
+      hostname="app.terraform.io"
+      organization = "cloud4cvpc" 
+      workspace {
+        name = "vpc-migration"
+      }
+    }
 
   }
   ####
 
 }
-
 #provider block
 provider "aws" {
   region = var.aws_region
