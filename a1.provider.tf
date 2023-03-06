@@ -13,14 +13,16 @@ terraform {
     null = {
       source = "hashicorp/null"
     }
-    backend "remote" {
-      hostname="app.terraform.io"
-      organization = "terraform-cloud" 
-      workspace {
-        name = "vpc-migration"
-      }
-    }
+    
 
+  }
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "terraform-cloud"
+
+    workspaces {
+      name = "vpc-migration"
+    }
   }
   ####
 
